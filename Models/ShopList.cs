@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace ModureVladLab7.Models
 {
@@ -14,5 +15,8 @@ namespace ModureVladLab7.Models
         public string Description { get; set; }
 
         public DateTime Date { get; set; }
+
+        [ForeignKey(typeof(Shop))]
+        public int ShopID { get; set; }
     }
 }
